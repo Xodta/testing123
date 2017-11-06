@@ -1,0 +1,27 @@
+{{errormsg}}
+<div ng-show="userloggedin" ng-controller="DashboardController">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+		<div class="col-md-3 usersdiv">
+			<div class="row usersheader"><strong>{{username}}</strong></div>
+			<div class="row userslist">
+				<ul ng-repeat="name in names">
+					<a href=""><li ng-click="userisclicked(name.email)"><img class="img-circle" ng-src="../public/images/{{name.name}}.png" /> {{name.name}}</li></a>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-9 msgsdiv" ng-hide="userclicked">
+			<div class="row msgsheader"><strong>Messages</strong></div>
+			<div class="row msgbody">
+					<ul>
+						<li ng-class="{yes: message.name==email,no: message.name!=email}" ng-repeat="message in messages" ><strong>{{message.message}}</li></strong>
+					</ul>
+		    </div>
+		    <div class="row sendarea">
+		    	<form ng-submit="send(email,message_)"><input type="text" ng-model="email" hidden="true">
+		    	<input type="text" ng-model="message_" placeholder="Enter Message Here" />
+		    	<button class="btn btn-primary">Send</button></form>
+		    </div>
+		</div>
+	</div>
+</div>

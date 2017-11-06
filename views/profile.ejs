@@ -1,0 +1,44 @@
+{{errormsg}}
+<div class="container" ng-show="userloggedin">
+    <div class="row">
+        <div class="col-md-6 profile">
+	     	 <h3>Profile</h3>
+	    </div>
+   </div>
+   <div class="col-md-6" ng-controller="ProfileController">
+   	     <form ng-submit="update(user)"><br>
+	     	 	 <div class="form-group">
+	     	 		 <label for="name">Name:</label>
+	     	 		 <input type="name" name="name" class="form-control" id="name" ng-model="user.name">
+	     	 	 </div>
+	     	 	 <div class="form-group">
+	     	 		 <label for="email">Email:</label>
+	     	 		 <input type="name" name="email" class="form-control" id="email" ng-model="user.email" readonly>
+	     	 	 </div>
+	     	 	 <div class="form-group">
+	     	 		 <label for="address">Address:</label>
+	     	 		 <input type="address" name="address" class="form-control" id="address" ng-model="user.address">
+	     	 	 </div>
+	     	 	 <div class="form-group">
+	     	 		 <label for="city">City:</label>
+	     	 		 <input type="city" name="city" class="form-control" id="city" ng-model="user.city">
+	     	 	 </div>
+	     	 	  <div class="form-group">
+	     	 		 <label for="dob">Date Of Birth:</label><br>
+	     	 		 <input style="width:117px;" type="text" name="dob" ng-model="user.dob" disabled="true">
+	     	 		 <input type="text" placeholder="Click To Change" name="dob" class="form-control" ng-model="user.dob" moment-picker="user.dob" format="LL" min-date="'January 1,1970'" max-date="'December 31,2002'">
+	     	 	 </div>
+	     	 	 <button type="submit" class="btn btn-primary">Update</button>
+	     </form>  
+   </div>
+   <div class="col-md-6" ng-controller="ProfileController">
+   		 <form enctype="multipart/form-data" ng-submit="submitform()">
+	     	<div class="form-group dpdiv">
+	     	 		 <br><label for="avatar">Picture:</label><br>
+	     	 		 <img ng-src="../public/images/{{user.name}}.png" class="userdp">
+	     	 		 <br></br></b><input type="file" name="avatar" id="avatar" ngf-select ng-model="avatar" accept="application/x-zip-compressed,image/*">
+	     	</div>
+	     	<button type="submit" class="btn btn-primary dpdiv">Update</button>
+	     </form>
+   </div>
+</div>

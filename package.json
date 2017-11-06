@@ -1,0 +1,27 @@
+{
+  "name": "assignment_1",
+  "version": "1.0.0",
+  "description": "A Chat Application",
+  "main": "index.js",
+  "dependencies": {
+    "angular-jwt": "^0.1.9",
+    "angularjs": "0.0.1",
+    "bcrypt": "^1.0.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-jwt": "^5.3.0",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.12.3",
+    "nodemon": "^1.12.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="chat-app">
+     <head>
+	     <title>Chat Application</title>
+	     <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" href="../public/css/main.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+         <script type="text/javascript" src="../public/js/socket.io.js"></script>
+         <script type="text/javascript" src="../public/js/angular-cookies.js"></script>
+         <script type="text/javascript" src ="../public/js/ng-file-upload.js"></script>
+         <script type="text/javascript" src ="../public/js/ng-file-shim.js"></script>
+         <script type="text/javascript" src="../Modules/MainModule.js"></script>
+         <script type="text/javascript" src="../Controllers/AngularControllers.js"></script>
+         <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.js"></script>
+         <script src="//cdn.rawgit.com/indrimuska/angular-moment-picker/master/dist/angular-moment-picker.min.js"></script>
+         <link href="//cdn.rawgit.com/indrimuska/angular-moment-picker/master/dist/angular-moment-picker.min.css" rel="stylesheet">
+         
+     </head>
+     <body>
+         <nav class="navbar navbar-default">
+             <div class="container-fluid">
+             	 <div class="navbar-header">
+             	     <a href="/" class="navbar-brand">Chat Application</a>
+             	 </div>
+             	 <ul class="nav navbar-nav list-inline col-md-10">
+             	 	 <li ng-hide="userloggedin"><a ui-sref="login">Login</a></li>
+             	 	 <li ng-hide="userloggedin"><a ui-sref="register">Register</a></li>
+                     <li ng-show="userloggedin"><a ui-sref="logout">Log Out</a></li>
+                     <li ng-show="userloggedin"><a ui-sref="profile">Profile</a></li>
+                </ul>
+             	 
+             </div>    	
+         </nav>
+         <div class="container-fluid">
+         	 <ui-view></ui-view>
+         </div>
+     </body>
+</html>

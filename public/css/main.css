@@ -1,0 +1,103 @@
+.navbar-nav li{
+	float:right;
+	font-weight: bold;
+}
+.logindiv,.profile{
+	width:49%;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: 1px solid #339999;
+}
+.formdiv{
+	width:60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:30px;
+}
+h4{
+	color: red;
+}
+.invalidmsg{
+	font-size:14px;
+	color: #a94442;
+    background-color: #ffffff;
+    border-color: #ebccd1;
+}
+.usersdiv,.msgsdiv,.msgbody,.sendarea,.usersheader,.msgsheader,.userslist{
+	border: 1px solid #C8C8C8;
+}
+.usersheader,.msgsheader{
+	height:50px;
+}
+.userslist{
+	height:350px;
+}
+.usersdiv{
+	height:400px;
+}
+.msgsdiv{
+	height:400px;
+}
+.msgbody{
+	height:285px;
+}
+.msgbody ul li{
+	list-style-type: none;
+}
+.sendarea{
+	height:50px;
+}
+.userslist,.msgbody{
+	overflow:hidden; 
+	overflow-y:scroll;
+}
+.userslist ul {
+	margin:0px;
+	padding:0px;
+	padding-top:10px;
+}
+.userslist ul li {
+	list-style-type: none;
+	height:45px;
+	border-bottom: 1px solid #C8C8C8;
+}
+img {
+	width:35px;
+	height:35px;
+	margin-left:10px;
+}
+.sendarea input{
+	width:100%;
+}
+.sendarea button{
+	width:100%;
+}
+.dpdiv{
+	margin-left:40px;
+}
+.userdp{
+	width:250px;
+	height:200px;
+}
+a {
+	color:black;
+}
+a:hover{
+	color:black;
+}
+.yes{
+    float:left;
+    clear:both;
+    padding: 5px;
+    border:1px solid black;
+    border-radius:40px;
+    margin:5px;
+}
+.no{
+	float:right;
+	clear:both;
+	padding: 5px;
+    border:1px solid black;
+    border-radius:40px;
+    margin:5px;
+}
